@@ -41,6 +41,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: install percy
+        run: npm install -g @percy/cli
       - name: Percy snapshots
         run: percy snapshot snapshots.yml
         env:
