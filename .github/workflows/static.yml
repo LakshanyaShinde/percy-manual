@@ -40,10 +40,9 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        id: deployment
-        uses: actions/deploy-pages@v4
+      #- name: Deploy to GitHub Pages
+       # id: deployment
+        #uses: actions/deploy-pages@v4
       - name: install percy
         run: npm install -g @percy/cli
       - name: Percy snapshots
